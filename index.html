@@ -126,10 +126,13 @@
             display: flex;
             gap: 8px;
             margin-bottom: 8px;
+            width: 100%;
+            overflow: hidden;
         }
 
         .filter-select {
             flex: 1;
+            min-width: 0;
             padding: 8px 12px;
             border: 1.5px solid var(--border);
             border-radius: var(--radius-sm);
@@ -145,6 +148,9 @@
             background-repeat: no-repeat;
             background-position: right 10px center;
             padding-right: 30px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         .filter-select:focus {
@@ -167,6 +173,8 @@
             font-family: inherit;
             cursor: pointer;
             color: var(--text-secondary);
+            flex-shrink: 0;
+            white-space: nowrap;
             white-space: nowrap;
             transition: all 0.2s;
         }
